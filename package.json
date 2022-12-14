@@ -1,0 +1,29 @@
+{
+  "name": "glimpseai",
+  "version": "1.0.0",
+  "description": "An OpenAi integrated system.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubham7350/GlimpseAI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubham7350/GlimpseAI/issues"
+  },
+  "homepage": "https://github.com/Shubham7350/GlimpseAI#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "nodemon": "^2.0.20",
+    "openai": "^3.1.0"
+  }
+}

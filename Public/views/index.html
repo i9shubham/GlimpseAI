@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glimpse AI</title>
+    <link rel="stylesheet" href=".././style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1 class="headline">Glimpse AI</h1>
+    </div>
+
+    <div class="searchbar">
+        
+            
+        <form action="/getImage" method="post">
+            <input id="searchQuery" name="searchQuery" class="search" type="text" placeholder="Enter your detailed glimpse">
+            <div class="gridview">
+                <input id="no" name="no" type="text" placeholder="No of Images">
+            </div>
+            <div class="gridview1">
+                <label >Choose Size: &nbsp</label>
+                <input id="small" name="small" type="button" value="256x256">&nbsp
+                <input id="medium" name="medium" type="button" value="512x512">&nbsp
+                <input id="large" name="large" type="button" value="1024x1024">
+            </div>
+            <div class="gridview1">
+                <input type="submit" value="get glimpse">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
