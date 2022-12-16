@@ -15,16 +15,16 @@
     <div class="searchbar">
         
             
-        <form action="/getImage" method="post">
-            <input id="searchQuery" name="searchQuery" class="search" type="text" placeholder="Enter your detailed glimpse">
+        <form action="/getImage" method="post" autocomplete="off">
+            <input id="searchQuery" name="prompt" class="search" type="text" placeholder="Enter your detailed glimpse">
             <div class="gridview">
-                <input id="no" name="no" type="text" placeholder="No of Images">
+                <input id="no" name="n" type="text" placeholder="No of Images">
             </div>
             <div class="gridview1">
                 <label >Choose Size: &nbsp</label>
-                <input id="small" name="small" type="button" value="256x256">&nbsp
-                <input id="medium" name="medium" type="button" value="512x512">&nbsp
-                <input id="large" name="large" type="button" value="1024x1024">
+                <input id="small" name="size" type="checkbox" value="256x256">&nbsp<label for="size">256x256</label>&nbsp &nbsp
+                <input id="medium" name="size" type="checkbox" value="512x512"> &nbsp<label for="size">512x512</label>&nbsp &nbsp
+                <input id="large" name="size" type="checkbox" value="1024x1024">&nbsp<label for="size">1024x1024</label>
             </div>
             <div class="gridview1">
                 <input type="submit" value="get glimpse">

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Shubham7350/GlimpseAI#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-validator": "^6.14.2",
     "nodemon": "^2.0.20",
