@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public/views')));
-app.set('views', path.join(__dirname + '/public/views/'))
+app.set('views', path.join(__dirname + '/public/views'))
 app.set('view engine', 'pug') //setting up a view engine
 app.use(express.static('Public'));
 app.use(express.json()); //midlewares
