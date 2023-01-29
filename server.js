@@ -8,8 +8,8 @@ import { Configuration, OpenAIApi } from 'openai'
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
-
-app.set('views', path.join(__dirname + '/Public/views/'))
+app.use(express.static(path.join(__dirname, 'public/views')));
+app.set('views', path.join(__dirname + '/public/views/'))
 app.set('view engine', 'pug') //setting up a view engine
 app.use(express.static('Public'));
 app.use(express.json()); //midlewares
@@ -25,8 +25,13 @@ const configuration = new Configuration({
 
 
 app.get("/", (req, res) => {
-    res.render("index")
-})
+    res.render("index", {images: [
+        '/teddy_shopping.jpg',
+        '/ancestors_vr.jpg',
+        '/astro_horse.jpg',
+        '/teddybear_exp.jpg'
+    ]});
+});
 
 app.post("/getImage", async (req, res, next) => {
     const openai = new OpenAIApi(configuration);
@@ -36,9 +41,10 @@ app.post("/getImage", async (req, res, next) => {
         size: req.body.size,
         response_format: "url", //there is also a b64_json format
     });
-    const images = response.data.data;
-    // console.log(images);
-    res.render("new", { images });
+    const images = response.data.data.map(image => image.url);
+
+    console.log(images);
+    res.render("new", { images: images });
 })
 
 
