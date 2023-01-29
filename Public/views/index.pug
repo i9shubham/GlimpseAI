@@ -33,8 +33,9 @@ html(lang='en')
         .gridview
             button(type='submit') get Glimpse
         .example-img 
-            each image in images
-                img(src=image alt='example image')
+            if images && images.length
+              each image, i in images
+                  img(src=images[i] alt='example image')
         p(style="text-align: center; margin-top: 1%;") These are some example images
         .github
           a(href='https://github.com/Shubham7350/GlimpseAI' target="_blank")
