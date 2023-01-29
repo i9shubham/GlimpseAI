@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public/views')));
-app.set('views', path.join(__dirname + '/public/views/'))
+app.set('views', path.join(__dirname + 'public/views/'))
 app.set('view engine', 'pug') //setting up a view engine
 app.use(express.static('Public'));
 app.use(express.json()); //midlewares
@@ -31,7 +31,7 @@ const images = [
 
 app.get("/", (req, res) => {
     // console.log(images)
-    res.render("index", {images});
+    res.render("index.pug", {images});
 });
 
 app.post("/getImage", async (req, res, next) => {
