@@ -22,15 +22,16 @@ const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
-
+const images = [
+    '/teddy_shopping.jpg',
+    '/ancestors_vr.jpg',
+    '/astro_horse.jpg',
+    '/teddybear_exp.jpg'
+]
 
 app.get("/", (req, res) => {
-    res.render("index", {images: [
-        '/teddy_shopping.jpg',
-        '/ancestors_vr.jpg',
-        '/astro_horse.jpg',
-        '/teddybear_exp.jpg'
-    ]});
+    // console.log(images)
+    res.render("index", {images});
 });
 
 app.post("/getImage", async (req, res, next) => {
@@ -43,7 +44,7 @@ app.post("/getImage", async (req, res, next) => {
     });
     const images = response.data.data.map(image => image.url);
 
-    console.log(images);
+    // console.log(images);
     res.render("new", { images: images });
 })
 
