@@ -6,6 +6,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Glimpse AI
     link(rel='stylesheet', href='.././style.css')
+    script(src="https://kit.fontawesome.com/108b848786.js" crossorigin="anonymous")
   body
     .heading
       h1.headline Glimpse AI
@@ -31,4 +32,10 @@ html(lang='en')
           label(for='size') 1024x1024
         .gridview
             button(type='submit') get Glimpse
-
+        .example-img 
+            each image in images
+                img(src=image alt='example image')
+        p(style="text-align: center; margin-top: 1%;") These are some example images
+        .github
+          a(href='https://github.com/Shubham7350/GlimpseAI' target="_blank")
+              i.fa-brands.fa-github.fa-2x
