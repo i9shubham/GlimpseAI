@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "npx pug public/views -o dist && cp -R public/* dist"
+    "clean": "rimraf dist",
+    "build": "rimraf dist && npx pug -d public/views -o dist && cp -R public/img dist && cp -R public/styles dist",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,11 @@
     "open": "^8.4.0",
     "openai": "^3.1.0",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "rimraf": "^4.1.2",
+    "webpack-cli": "^5.0.1"
   }
 }
