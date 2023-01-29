@@ -35,7 +35,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/getImage", async (req, res, next) => {
-    const openai = new OpenAIApi(configuration);
+    try {
+        const openai = new OpenAIApi(configuration);
     const response = await openai.createImage({
         prompt: req.body.prompt,
         n: +req.body.n,
@@ -46,8 +47,16 @@ app.post("/getImage", async (req, res, next) => {
 
     // console.log(images);
     res.render("new", { images: images });
+    } catch (error) {
+        console.error(error);
+        next(error);
+    }
 })
 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+})
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
