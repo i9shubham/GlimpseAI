@@ -61,6 +61,25 @@ button {
     margin-top: 5%;
 }
 
+/* index pug file  */
+.example-img{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 5% 0;
+}
+.example-img img{
+    width: 20vw;
+}
+@media screen and (max-width: 600px) {
+    .example-img {
+      flex-direction: column;
+      align-items: center;
+    }
+    .example-img img {
+      width: auto;
+      max-width: 80vw;
+    }
+}
 .images {
     width: 60vw;
     height: auto;
@@ -71,4 +90,10 @@ button {
 .images img {
     width: 100%;
     margin: 2vh 0;
+}
+.github{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 1%;
 }
