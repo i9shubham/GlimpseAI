@@ -31,7 +31,7 @@ const images = [
 
 app.get("/", (req, res) => {
     // console.log(images)
-    res.render("index.pug", {images});
+    res.render("index", {images});
 });
 
 app.post("/getImage", async (req, res, next) => {
