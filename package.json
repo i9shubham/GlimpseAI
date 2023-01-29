@@ -32,11 +32,5 @@
     "open": "^8.4.0",
     "openai": "^3.1.0",
     "pug": "^3.0.2"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "rimraf": "^4.1.2",
-    "webpack-cli": "^5.0.1"
   }
 }
