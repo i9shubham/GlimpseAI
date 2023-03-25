@@ -12,7 +12,8 @@ html(lang='en')
     form(action='/', method='get')
         .backToSearch
             button(type='submit') Back To Search
-    .images 
-        if images && images.length
-            each image in images
-                img(src=image)
+    .container
+      .images 
+          if images && images.length
+              each image in images
+                  img(src=image)

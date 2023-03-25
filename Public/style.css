@@ -2,15 +2,21 @@
     margin: 0;
     padding: 0;
     font-size: 2vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 }
 
+body{
+    margin: 0 2vw;
+    background-color: #fff;
+    background: url(./particle-cosmic-24243.mp4);
+}
+
+
 .heading {
-    padding: 0.5rem 0;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
+    padding: 1rem 0;
+    text-align: left;
+    color: #000;
 }
 
 .headline {
@@ -28,14 +34,26 @@ input {
 
 #searchQuery {
     width: 60vw;
-    margin: 0 20vw;
+    margin: 0 20vw 2vh;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 2px 4px 0 rgba(0,0,82,.15);
+    transition: 0.5s;
+}
+
+#searchQuery:focus{
+    outline: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 48, 0.455);
 }
 
 #no {
-    width: 2vw;
+    width: 5vw;
     text-align: center;
-    margin-left: 1vw;
-    border: 1px dashed;
+    margin: 10px 1vw;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 82, 0.455);
+    outline: none;
 }
 
 .n {
@@ -63,13 +81,19 @@ button {
 }
 
 /* index pug file  */
-.example-img{
+.img{
     display: flex;
-    justify-content: space-between;
-    margin: 5% 5% 0;
+    margin-top: 3rem;
+    justify-content: center;
 }
+
+.example-img {
+    text-align: center;
+}
+
 .example-img img{
-    width: 20vw;
+    width: 15vw;
+    margin: 0 2rem;
 }
 @media screen and (max-width: 600px) {
     .example-img {
@@ -81,11 +105,18 @@ button {
       max-width: 80vw;
     }
 }
+
+.container{
+    width: 80vw;
+    margin: 2vh 10vw 0;
+    display: flex;
+}
+
 .images {
-    width: 60vw;
+    width: 20vw;
     height: auto;
-    margin: 5% 20vw 0;
-    display: block;
+    /* margin: 5% 20vw 0; */
+    display: inline-block;
 }
 
 .images img {
