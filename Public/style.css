@@ -6,7 +6,7 @@
     overflow-x: hidden;
 }
 
-body{
+body {
     margin: 0 2vw;
     background-color: #fff;
     background: url(./particle-cosmic-24243.mp4);
@@ -37,11 +37,11 @@ input {
     margin: 0 20vw 2vh;
     padding: 20px;
     border: none;
-    box-shadow: 0 2px 4px 0 rgba(0,0,82,.15);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 82, .15);
     transition: 0.5s;
 }
 
-#searchQuery:focus{
+#searchQuery:focus {
     outline: none;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 48, 0.455);
 }
@@ -81,7 +81,7 @@ button {
 }
 
 /* index pug file  */
-.img{
+.img {
     display: flex;
     margin-top: 3rem;
     justify-content: center;
@@ -91,22 +91,37 @@ button {
     text-align: center;
 }
 
-.example-img img{
+.example-img img {
     width: 15vw;
     margin: 0 2rem;
 }
+
 @media screen and (max-width: 600px) {
+    .headline {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    body {
+        margin: 0;
+    }
+
     .example-img {
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .example-img img {
-      width: auto;
-      max-width: 80vw;
+
+    .example-img img{
+        width: 80%;
+        margin-top: 10px;
     }
+
+    
+
 }
 
-.container{
+.container {
     width: 80vw;
     margin: 2vh 10vw 0;
     display: flex;
@@ -123,7 +138,8 @@ button {
     width: 100%;
     margin: 2vh 0;
 }
-.github{
+
+.github {
     display: flex;
     justify-content: center;
     text-decoration: none;
